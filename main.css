@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+    text-align: center;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	background-color: #7568ec
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: rgb(21, 6, 114);
+    font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+#enterNewTask {
+	display: flex;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#inputNewTask {
+	flex: 1 1 0%;
+	background-color: #f66e6e;
+	padding: 1rem;
+	border-radius: 10rem;
+	margin-right: 0.5rem;
+	color: rgb(0, 0, 0);
+	font-size: 1.4rem;
+}
+
+#inputNewTask::placeholder {
+	color: rgb(101, 97, 97);
+    font-weight: bold;
+}
+
+#submitNewTask {
+	color: white;
+	font-size: 3.5rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, rgb(142, 44, 44), rgb(224, 16, 50));
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	cursor:pointer;
+	/* transition: 0.4s; */
+}
+
+#submitNewTask:hover {
+	opacity: 0.8;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.addTasks {
+	padding: 1rem;
+}
+
+.addTasks h2 {
+    text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+	color: rgb(93, 10, 138);
+	margin-bottom: 1rem;
+}
+
+#tasks .title {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(12, 73, 111);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.title .content {
+	flex: 1 1 0%;
+}
+
+.title .content .text {
+	color: white;
+	font-size: 1.5rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.title .content .text:not(:read-only) {
+	color: white;
+}
+
+.title .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.title .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: bold;
+	transition: 0.4s;
+}
+
+.title .actions button:hover {
+	opacity: 0.8;
+}
+
+.title .actions button:active {
+	opacity: 0.6;
+}
+
+/* .title .actions .edit {
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+} */
+
+.title .actions .delete {
+	color: red;
+}
