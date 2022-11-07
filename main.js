@@ -26,16 +26,11 @@ window.addEventListener('load', () => {
 
 		const title_action = document.createElement('div');
 		title_action.classList.add('actions');
-		
-		// const task_edit_el = document.createElement('button');
-		// task_edit_el.classList.add('edit');
-		// task_edit_el.innerText = 'Edit';
 
 		const title_delete = document.createElement('button');
 		title_delete.classList.add('delete');
 		title_delete.innerText = 'X';
 
-		// title_action.appendChild(task_edit_el);
 		title_action.appendChild(title_delete);
 
 		titleEle.appendChild(title_action);
@@ -43,17 +38,6 @@ window.addEventListener('load', () => {
 		list_el.appendChild(titleEle);
 
 		input.value = '';
-
-		// task_edit_el.addEventListener('click', (e) => {
-		// 	if (task_edit_el.innerText.toLowerCase() == "edit") {
-		// 		task_edit_el.innerText = "Save";
-		// 		title_input.removeAttribute("readonly");
-		// 		title_input.focus();
-		// 	} else {
-		// 		task_edit_el.innerText = "Edit";
-		// 		title_input.setAttribute("readonly", "readonly");
-		// 	}
-		// });
 
 		title_delete.addEventListener('click', (e) => {
 			list_el.removeChild(titleEle);
